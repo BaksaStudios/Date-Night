@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 8259701058486125661}
   - component: {fileID: -5229461162975938778}
   - component: {fileID: -3202189487052547554}
+  - component: {fileID: -1653589575778325622}
   m_Layer: 8
   m_Name: Player_Blue
   m_TagString: Player_Blue
@@ -260,6 +261,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 8259701058486125661}
   heart: {fileID: 1371366267425912143}
+--- !u!114 &-1653589575778325622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3134556707243007484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &4788982535987205614
 GameObject:
   m_ObjectHideFlags: 0
