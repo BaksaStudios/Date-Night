@@ -5,12 +5,13 @@ using System.Collections;
 using SickDev.CommandSystem;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
-namespace SickDev.CommandSystem {
-    public class DevConsole {
-        public static SickDev.DevConsole.DevConsole singleton { get { return SickDev.DevConsole.DevConsole.singleton; } }
-    }
-}
+// namespace SickDev.CommandSystem {
+//     public class DevConsole {
+//         public static SickDev.DevConsole.DevConsole singleton { get { return SickDev.DevConsole.DevConsole.singleton; } }
+//     }
+// }
 
 namespace SickDev.DevConsole{
     public class DevConsole : MonoBehaviour, ISerializationCallbackReceiver {
@@ -93,7 +94,10 @@ namespace SickDev.DevConsole{
         static void Instantiate() {
             _singleton = FindObjectOfType<DevConsole>();
             if(_singleton == null)
-                _singleton = Instantiate(Resources.Load<DevConsole>("DevConsole"));
+            {
+                var devConsole = Resources.Load<DevConsole>("DevConsole");
+                _singleton = Instantiate(devConsole);
+            }
         }
 
         public void OnBeforeSerialize() {
